@@ -1,5 +1,7 @@
 
 
+
+
 var src = yuquejson.data.body;
 var content = {
     "nav": [],
@@ -42,32 +44,32 @@ function init() {
     // console.log(src.match(/# .*\n/g));//查找一级标题
     // console.log(src.match(/>.*\n/g));//查找注释内容
     src = src.replace(/<a.*a>|>.*\n/g, "").trim();//去除a标签和注释内容
-    console.log(src);//打印除杂后的原始数据
+    // console.log(src);//打印除杂后的原始数据
 
     src = trans(src);//将原始数据解析成数组，表格在后续进行解析
-    console.log(src);
+    // console.log(src);
     nav = src[0][1];
     header = src[1][1];
     banner = src[2][1];
     menus = src[3][1];
     footer = src[4][1];
 
-    console.log("nav:\n");
-    console.log(nav);//string   
-    console.log("header:\n");
-    console.log(header);//string 
-    console.log("banner:\n");
-    console.log(banner);// 
-    console.log("menus:\n");
-    console.log(menus);//array 
-    console.log("footer:\n");
-    console.log(footer);//array 
+    // console.log("nav:\n");
+    // console.log(nav);//string   
+    // console.log("header:\n");
+    // console.log(header);//string 
+    // console.log("banner:\n");
+    // console.log(banner);// 
+    // console.log("menus:\n");
+    // console.log(menus);//array 
+    // console.log("footer:\n");
+    // console.log(footer);//array 
 
     transHeader();
     transNav();
     transMenus();
     transFooter();
-    console.log(JSON.stringify(content));
+    // console.log(JSON.stringify(content));
 
 }
 
