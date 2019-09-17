@@ -264,7 +264,7 @@ body{
     width:40px;
     height:40px;
     float: left;
-    border-radius: 20px;
+    border-radius: 4px;
     /* background:rgba(255,77,79,1); */
     background-position:center; 
     background-repeat:no-repeat;
