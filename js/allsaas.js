@@ -34,6 +34,7 @@ $(document).ready(function () {
     refreshLogo();//为无logo的卡片制作默认logo
     refreshDetail();//为无详情的卡片制作默认详情
     refreshFooter();//用json填充footer
+    sideTool();//侧边栏的交互
     
 })
 
@@ -408,4 +409,27 @@ function urlUpgrade(str) {
     }
 
     return str;
+}
+//侧边栏的事件
+function sideTool() {
+
+    $("#totop").click(function () {
+        console.log(document.documentElement.scrollTop);
+        
+        let time=setInterval(function () {
+            window.scrollBy(0, -50);
+            if (document.documentElement.scrollTop < 1) {
+                console.log(document.documentElement.scrollTop);
+                clearTimeout(time);
+            }
+
+     },20);
+        
+        
+
+
+    });
+
+
+
 }
