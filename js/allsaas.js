@@ -19,8 +19,11 @@ window.addEventListener("scroll", function (e) {
     // console.log(t);
     if (t >= 400) {
         $(".fix").css({ "position": "fixed", "top": "50px" });
+        $('#totop').css({"opacity":"1"})
+
     } else {
         $(".fix").css({ "position": "static" })
+        $('#totop').css({"opacity":"0"})
     }
 });
 
@@ -432,9 +435,4 @@ function sideTool() {
 
 
 
-}
-function cancle() {
-    console.log(document.getElementById("wjbgc"));
-    
-    document.getElementById("wjbgc").style.display='none';
 }
