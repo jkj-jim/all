@@ -11,6 +11,7 @@ body,div,span,a,h2,h3,h4,h5{
 
 body{
     background:rgba(246,248,252,1); 
+
 }
 .head{
     height: 400px;
@@ -364,4 +365,47 @@ background-position: center;
     width:160px;
     height:160px;
     transition: all 0.4s;
+}
+.line{
+    width:200px;
+height:1px;
+background-color: #DDD;
+margin: 20px 0;
+}
+.addRequestlink{
+    width:200px;
+height:40px;
+background:linear-gradient(180deg,rgba(116,192,255,1) 0%,rgba(64,140,255,1) 100%);
+border-radius:4px;
+font-size:14px;
+font-weight:400;
+color:rgba(255,255,255,1);
+line-height:40px;
+text-align: center;
+}
+
+.addRequestlink:hover{
+    cursor: pointer;
+}
+#wjbgc{
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: rgba(0,0,0,.4);
+}
+.wj{
+    margin: 40px auto;
+    width: 80%;
+    height: calc(100% - 80px);
+    border-radius: 4px;
+    background-color: #fff;
+}
+#wjqq{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
 }

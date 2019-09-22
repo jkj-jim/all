@@ -433,3 +433,8 @@ function sideTool() {
 
 
 }
+function cancle() {
+    console.log(document.getElementById("wjbgc"));
+    
+    document.getElementById("wjbgc").style.display='none';
+}
