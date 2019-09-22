@@ -15,9 +15,11 @@ var nav, header, banner, menus, footer;
 //屏幕的滚动事件，让左侧目录固定
 window.addEventListener("scroll", function (e) {
     //变量t就是滚动条滚动时，到顶部的距离
-    var t = document.documentElement.scrollTop || document.body.scrollTop;
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    let scrollHeight=document.documentElement.scrollHeight||document.body.scrollHeight;
+    let windowHeight=document.documentElement.clientHeight||document.body.clientHeight;
     // console.log(t);
-    if (t >= 400) {
+    if (scrollTop >= 400) {
         $(".fix").css({ "position": "fixed", "top": "50px" });
         $('#totop').css({"opacity":"1"})
 
@@ -25,6 +27,11 @@ window.addEventListener("scroll", function (e) {
         $(".fix").css({ "position": "static" })
         $('#totop').css({"opacity":"0"})
     }
+    if (scrollTop + windowHeight == scrollHeight) {
+        $('#bigidea').css({"opacity":"1"})
+    }
+
+
 });
 
 
